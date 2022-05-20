@@ -1,0 +1,20 @@
+{
+  "name": "flower-bend",
+  "version": "1.0.0",
+  "description": "art project for xiaopeng zhou",
+  "scripts": {
+    "image": "cd ./docker && docker image build -t php8 .\n",
+    "start": "cd ./docker && docker-compose up",
+    "down": "cd ./docker && docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasStill/flower-bend.git"
+  },
+  "author": "tobias still",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/TobiasStill/flower-bend/issues"
+  },
+  "homepage": "https://github.com/TobiasStill/flower-bend#readme"
+}
