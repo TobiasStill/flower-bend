@@ -12,12 +12,11 @@ Icon
 
 # Lock files
 # ---------------
-
 .lock
 
 # Editors
-# (sensitive workspace files)
-# ---------------------------
+# ---------------
+*.sublime-project
 *.sublime-workspace
 /.vscode
 /.idea
@@ -46,7 +45,8 @@ Icon
 
 # License
 # ---------------
-
 /site/config/.license
 
-/content
+# Content
+# ---------------
+/content/*
