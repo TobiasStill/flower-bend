@@ -7,9 +7,10 @@
 
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
 
-  <?= css(['assets/index.css', '@auto']) ?>
+  <?= css(['assets/main.css', '@auto']) ?>
+  <?= js(['assets/overlays.js', '@auto']) ?>
+  <?= js(['assets/helper.js', '@auto']) ?>
 
 
-</head>
-<body>
+
 

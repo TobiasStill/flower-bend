@@ -1,0 +1,100 @@
+body{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  backface-visibility: hidden;
+  transition: 3s background-image linear;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  background-color: olive;
+}
+
+.drawings-row{
+  display: inline-grid;
+  grid-template-columns: repeat(14, 1fr);
+}
+.drawings-col-1{
+  grid-column-start: 1;
+}
+.drawings-col-2{
+  grid-column-start: 2;
+}
+.drawings-col-3{
+  grid-column-start: 3;
+}
+.drawings-col-4{
+  grid-column-start: 4;
+}
+.drawings-col-5{
+  grid-column-start: 5;
+}
+.drawings-col-6{
+  grid-column-start: 6;
+}
+.drawings-col-7{
+  grid-column-start: 7;
+}
+.drawings-col-8{
+  grid-column-start: 8;
+}
+.drawings-col-9{
+  grid-column-start: 9;
+}
+.drawings-col-10{
+  grid-column-start: 10;
+}
+.drawings-col-11{
+  grid-column-start: 11;
+}
+.drawings-col-12{
+  grid-column-start: 12;
+}
+.drawings-col-13{
+  grid-column-start: 13;
+}
+.drawings-col-14{
+  grid-column-start: 14;
+}
+.drawing{
+  margin: 0;
+  padding: 0;
+  place-self: center;
+  width: 100%;
+  max-width: 100px;
+}
+.drawing img{
+  width: 100%;
+
+}
+
+#overlay-text,
+#overlay-image {
+  position: absolute;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.65);
+  display: inline-block;
+}
+
+#overlay-image {
+  font-size: 0;
+  width: 400px;
+}
+
+#overlay-text {
+  width: 50vw;
+  min-width: 400px;
+}
+
+#overlay-text .overly-content{
+  min-height: 400px;
+  max-height: 80vh;
+  font-size: 18px;
+}
+
+#overlay-image img {
+  width: 100%;
+  max-width: 100vw;
+}

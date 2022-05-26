@@ -1,0 +1,3 @@
+accept:
+  mime: audio/*
+  type: audio

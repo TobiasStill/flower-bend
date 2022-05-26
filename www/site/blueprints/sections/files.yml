@@ -1,0 +1,9 @@
+
+Title: Files
+preset: files
+type: files
+layout: cards
+size: tiny
+image:
+  cover: true
+  back: pattern

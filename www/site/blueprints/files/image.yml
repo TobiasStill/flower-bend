@@ -1,0 +1,5 @@
+accept:
+  mime: image/*
+  type: image
+  maxwidth: 1500
+  maxSize: 512000000
