@@ -1,15 +1,36 @@
+html{
+  background-color: #47471d;
+}
+html, body{
+  color: #fff;
+  font-family: "Times New Roman", serif;
+}
 body{
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
   backface-visibility: hidden;
-  transition: 3s background-image linear;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
 }
-
-html{
-  background-color: olive;
+.main-head {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+.main-nav {
+  grid-area: nav;
+}
+.side {
+  grid-area: sidebar;
+}
+.ad {
+  grid-area: ad;
+}
+.main-footer {
+  grid-area: footer;
 }
 
 .drawings-row{
@@ -74,7 +95,7 @@ html{
 #overlay-image {
   position: absolute;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(0, 0, 0, 0.65);
   display: inline-block;
 }
 
@@ -89,6 +110,10 @@ html{
 }
 
 #overlay-text .overly-content{
+  padding: 1em;
+}
+
+#overlay-text .overly-content{
   min-height: 400px;
   max-height: 80vh;
   font-size: 18px;
@@ -97,4 +122,39 @@ html{
 #overlay-image img {
   width: 100%;
   max-width: 100vw;
+}
+header {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "title"
+    "text-button";
+}
+
+header .title{
+  grid-area: title;
+}
+header button {
+  grid-area: text-button;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #fff!important;
+  font-size: 25px;
+  font-family: 'Arial', sans-serif;
+}
+header .page-title{
+  font-family: 'Arial', sans-serif;
+}
+
+@media (min-width: 500px) {
+  header {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "title  text-button";
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }

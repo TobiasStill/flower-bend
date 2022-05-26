@@ -1,6 +1,6 @@
 
 
-var overlays = (function () {
+var drawings = (function () {
 
   let overlay;
 
@@ -82,6 +82,9 @@ function cycleBg(images) {
   window.setInterval(() => {
     x = (x+1) % l;
     var image = images[x];
-    document.body.style.background =  `${props} url(${image})`;
+    document.body.style.backgroundImage = 'url("")';
+    window.setTimeout(() => {
+      document.body.style.background =  `${props} url(${image})`;
+    }, 3000)
   }, 20000)
 }

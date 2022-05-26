@@ -1,4 +1,4 @@
-<picture class="picture" onclick="overlays.showImage(event, '<?= $image->url() ?>')">
+<picture class="picture" onclick="drawings.showImage(event, '<?= $image->url() ?>')">
   <source media="(min-width: 601px)" srcset="<?= $image->srcset([$width]) ?>">
   <source media="(max-width: 600px)" srcset="<?= $image->srcset([540]) ?>">
   <img
