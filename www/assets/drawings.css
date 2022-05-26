@@ -14,6 +14,10 @@ body{
   margin: 0;
   padding: 0;
 }
+a:link {
+  color: #fff!important;;
+  text-decoration: underline;
+}
 .main-head {
   grid-area: header;
 }
@@ -153,8 +157,35 @@ header .page-title{
     grid-template-areas:
       "title  text-button";
   }
-  nav ul {
-    display: flex;
-    justify-content: space-between;
+}
+footer {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "footer-logos"
+    "footer-text"
+    "copy";
+  padding-bottom: 3em;
+}
+footer .text{
+  grid-area: footer-text;
+}
+footer .logos {
+  grid-area: footer-logos;
+}
+footer .logos img{
+  width: 50px;
+}
+header .copy{
+  grid-area: footer-copy;
+}
+
+@media (min-width: 100px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "footer-logos
+      "footer-text";
+      "copy copy";
   }
 }

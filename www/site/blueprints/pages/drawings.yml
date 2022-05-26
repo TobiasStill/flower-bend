@@ -22,6 +22,17 @@ tabs:
                 layout: cards
                 image:
                   back: pattern
+              footerText:
+                label: Footer Text
+                type: textarea
+              footerLogos:
+                label: Footer Logos
+                type: files
+                min: 0
+                max: 5
+                layout: cards
+                image:
+                  back: pattern
       right:
         width: 1/3
         sections:

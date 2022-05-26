@@ -2,6 +2,7 @@
 $drawings = $page->drawings()->toStructure();
 $backgrounds = $page->background()->toFiles();
 $bCount = count($backgrounds);
+$footerLogos = $page->footerLogos()->toFiles();
 ?>
 <!doctype html>
 <html lang="en">
@@ -55,9 +56,32 @@ $bCount = count($backgrounds);
     </div>
   </main>
 
-  <?php
-  snippet('footer');
-  ?>
+  <footer>
+    <?php
+    if ($footerLogos) {
+      ?>
+    <div class="logos">
+      <?php
+      foreach ($footerLogos as $image) {
+      ?>
+      <picture class="picture" onclick="drawings.showImage(event, '<?= $image->url() ?>')">
+        <source media="(min-width: 601px)" srcset="<?= $image->srcset([100]) ?>">
+        <source media="(max-width: 600px)" srcset="<?= $image->srcset([50]) ?>">
+        <img
+          src="<?= $image->url() ?>"
+          srcset="<?= $image->srcset([50, 100]) ?>"
+          sizes="(max-width: 600px) 540px, (min-width: 600px) <?= 50 ?>px"
+          alt="<?= $image->alt() ?>"
+        />
+      </picture>
+      <?php
+      } ?>
+    </div>
+    <?php }
+    ?>
+    <div class="text"><?= $page->footerText()->kirbytext() ?></div>
+    <div class="copy">&copy; Xiaopeng Zhou <?= date("Y");?> | <?= page('impressum')->title()->link() ?></div>
+  </footer>
 </div>
 
 </body>
